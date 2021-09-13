@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder Calculator</title>
+    <style type="text/css">
+
+    body {
+      background: linear-gradient(-45deg, #19c552, #dd1717, #2a58ee, #7a18ca);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    @keyframes gradient {
+       0% {
+           background-position: 0% 50%;
+       }
+       50% {
+           background-position: 100% 50%;
+       }
+       100% {
+           background-position: 0% 50%;
+       }
+    }
+		.btn:active {
+			background-color: #DC143C;
+		}
+	</style>
+</head>
+<body style="text-align: center;background-color: #008B8B;font-size: 34px;font-weight: 600;font-family: consolas;margin-top: 280px;">
+    <div style="border-style: solid; width: 450px; height: 43vh; position: fixed; top: 50%; left: 50%; margin-top: -100px; margin-left: -230px;">
+        <span>Number 1</span>
+        <input id="num1" style="margin-left: 16px; margin-top: 25px; padding: 4px 10px 10px 4px;">
+        <br>
+        <span>Number 2</span> 
+        <input id="num2" style="margin-left: 2.4vh; padding: 4px 10px 10px 4px;">
+        <br>
+        <input onclick="calcRem()" class="btn" type="submit" value="Calculate" style="padding: 15px 15px; width: 165px; height: 45px;margin-top: 14px;border-radius: 8px;border-color: black;border-style: outset;cursor: pointer;">
+        <br>
+        <span>Quotient</span>
+        <input id="quo" style="margin-left: 16px; margin-top: 25px; padding: 4px 10px 10px 4px;">
+        <br>
+        <span>Reminder</span>
+        <input id="rem" style="margin-left: 16px; margin-top: 25px; padding: 4px 10px 10px 4px;">
+    </div>
+    <script type="text/javascript">
+        function calcRem() {
+            var nu1 = parseInt(document.getElementById('num1').value);
+            var nu2 = parseInt(document.getElementById('num2').value);
+            var rem = 0;
+            var quo = 0.0;
+            quo = nu1 / nu2;
+            rem = nu1 % nu2;
+            document.getElementById('quo').value = "" + quo;
+            document.getElementById('rem').value = "" + rem;
+            quo = 0.0;
+            rem = 0;    
+        }
+    </script>
+</body>
+</html>
