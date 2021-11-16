@@ -1,2 +1,2 @@
 # Reminder_Calculator
-This is a simple site that calculate 2 numbers to find reminder.
+This is a simple site that find the reminder of 2 numbers.
