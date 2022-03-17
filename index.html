@@ -1,49 +1,64 @@
 <html lang="en"><head>
     <meta charset="UTF-8">
     <style type="text/CSS">
-    body {
-      background: linear-gradient(-45deg, #19c552, #dd1717, #2a58ee, #7a18ca);
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
-      margin-top: 12%;
-    }
-	  
-	    .myDiv {
-		      margin: 16rem 14rem 5rem 17rem;
-  border-style: solid;
-  padding: 1rem 0 2rem 0;
-  text-align: center;
-}
-	    
-	    input {
-		    padding: 9px;
-border-radius: 0.6em;
-border-style: solid;
-border-color: darkgray;
-background: #eee;
-cursor: pointer;
-	    }
-	    
-	    p {
-		    text-align: center; 
-		    margin-top: 9%;
-		    font-size: 3.2vw;
-	    }
+		body {
+			background: linear-gradient(-45deg, #19c552, #dd1717, #2a58ee, #7a18ca);
+			background-size: 400% 400%;
+			animation: gradient 15s ease infinite;
+			font-weight: bolder;
+			font-family: calibri;
+			font-size: 1.3rem;
+		}
 
-    @keyframes gradient {
-       0% {
-           background-position: 0% 50%;
-       }
-       50% {
-           background-position: 100% 50%;
-       }
-       100% {
-           background-position: 0% 50%;
-       }
-    }
-	.btn:active {
-		background-color: #DC143C;
-	}
+		.myDiv {
+			margin: 13rem 14rem 5rem 13rem;
+			border-style: solid;
+			padding: 1rem 0 2rem 0;
+			text-align: center;
+		}
+
+		input {
+			padding: 9px;
+			border-radius: 0.6em;
+			border-style: solid;
+			border-color: darkgray;
+			background: #eee;
+			cursor: pointer;
+			margin-top: 1em;
+		}
+		
+		.btn {
+  			width: 8rem;
+  			height: 3rem;
+  			font-weight: 800;
+  			font-family: calibri;
+  			font-size: 1.2rem;
+		}
+		
+		span {
+  			margin-right: 9px;
+		}
+
+		p {
+			text-align: center; 
+			margin-top: 9%;
+			font-size: 3.2vw;
+		}
+
+		@keyframes gradient {
+		   0% {
+			   background-position: 0% 50%;
+		   }
+		   50% {
+			   background-position: 100% 50%;
+		   }
+		   100% {
+			   background-position: 0% 50%;
+		   }
+		}
+		.btn:active {
+			background-color: #DC143C;
+		}
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reminder Calculator</title>
@@ -64,11 +79,11 @@ cursor: pointer;
         <br>
         <span>Reminder</span>
         <input id="rem">
-
-
     </div>
+	
     <p>This Site Developed By <a style="font-weight: 600; font-family: Consolas;font-size: large;" href="https://www.twitter.com/HD7V7/">AHMED ALHARBI</a></p>
-    <script type="text/javascript">
+    
+	<script type="text/javascript">
         function calcRem() {
             var nu1 = parseInt(document.getElementById('num1').value);
             var nu2 = parseInt(document.getElementById('num2').value);
